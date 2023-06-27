@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 
 //import cheerio and express
 import { load } from "cheerio";
@@ -6,6 +7,7 @@ import axios from "axios";
 
 //initialise express application
 const app = express();
+app.use(cors());
 
 //api route to handle requests
 app.get("/api/preview", async (req, res) => {
